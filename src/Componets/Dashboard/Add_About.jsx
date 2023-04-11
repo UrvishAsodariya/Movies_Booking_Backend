@@ -32,9 +32,9 @@ const Add_About = () => {
         <>
             <Header />
             <Sidebar />
-            <RightSideBar />
+            {/* <RightSideBar /> */}
             <section className="content">
-                <div className="block-header">
+                {/* <div className="block-header">
                     <div className="row">
                         <div className="col-lg-7 col-md-5 col-sm-12">
                             <h2>Add Doctors
@@ -52,7 +52,7 @@ const Add_About = () => {
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className="container-fluid">
                     <div className="row clearfix">
                         <div className="col-lg-12 col-md-12 col-sm-12">

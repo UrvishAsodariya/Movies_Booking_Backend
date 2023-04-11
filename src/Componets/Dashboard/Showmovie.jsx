@@ -53,8 +53,8 @@ const Showmoive = () => {
                             <div className="card">
                                 <div className="body">
                                     <ul className="nav nav-tabs padding-0">
-                                        <li className="nav-item"><a className="nav-link active" data-toggle="tab" href="#Permanent">Permanent</a></li>
-                                        <li className="nav-item"><a className="nav-link" data-toggle="tab" href="#Consultant">Consultant</a></li>
+                                        <li className="nav-item"><a className="nav-link active" data-toggle="tab" href="#Permanent">Details</a></li>
+                                        {/* <li className="nav-item"><a className="nav-link" data-toggle="tab" href="#Consultant">Consultant</a></li> */}
                                     </ul>
                                 </div>
                             </div>

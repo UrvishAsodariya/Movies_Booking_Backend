@@ -11,8 +11,7 @@ const Sidebar = () => {
                             <ul className="list">
                                 
                                 <li className="header">Dashboard</li>
-                                <li className="active open"><a href='Dashboard'><i className="zmdi zmdi-home" /><span>Home</span></a></li>
-                                <li><a href="BookAppointment"><i className="zmdi zmdi-calendar-check" /><span>Appointment</span></a></li>
+                                <li className="active open"><a href='/'><i className="zmdi zmdi-home" /><span>Home</span></a></li>
                                 <li><a href="javascript:void(0);" className="menu-toggle"><i className="zmdi zmdi-account-add" /><span>Movies</span> </a>
                                     <ul className="ml-menu">
                                         <li><a href="Showmovie">All Movies</a></li>
@@ -21,13 +20,13 @@ const Sidebar = () => {
                                 </li>
                                 <li><a href="javascript:void(0);" className="menu-toggle"><i className="zmdi zmdi-account-add" /><span>Events</span> </a>
                                     <ul className="ml-menu">
-                                        <li><a href="ShowDoctors">All Events</a></li>
+                                        <li><a href="#">All Events</a></li>
                                         <li><a href="AddEvent">Add Event</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:void(0);" className="menu-toggle"><i className="zmdi zmdi-account-add" /><span>Sport</span> </a>
                                     <ul className="ml-menu">
-                                        <li><a href="ShowDoctors">All Sport</a></li>
+                                        <li><a href="#">All Sport</a></li>
                                         <li><a href="AddSport">Add Sport</a></li>
                                     </ul>
                                 </li>

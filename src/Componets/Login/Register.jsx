@@ -81,7 +81,7 @@ const Register = () => {
           </div>
         </nav>
         <div className="page-header">
-          <div className="page-header-image" style={{ backgroundImage: 'url(../assets/images/login.jpg)' }} />
+          <div className="page-header-image" style={{ backgroundImage: 'url(../assets/images/8.jpg)' }} />
           <div className="container">
             <div className="col-md-12 content-center">
               <div className="card-plain">

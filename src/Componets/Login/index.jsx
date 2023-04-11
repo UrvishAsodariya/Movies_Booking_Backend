@@ -22,7 +22,7 @@ const Login = () => {
 
                 if ((response.data.email === loginData.email) && (response.data.password === loginData.password)) {
                     window.localStorage.setItem('id', response.data.id)
-                    window.location.href = '/Dashboard'
+                    window.location.href = '/'
                     setval([response.data,true])
                 }
                 else {
@@ -53,7 +53,7 @@ const Login = () => {
                 <nav className="navbar navbar-expand-lg fixed-top navbar-transparent">
                     <div className="container">
                         <div className="navbar-translate n_logo">
-                            <a className="navbar-brand" href=" " title="" target="_blank">Oreo</a>
+                            <a className="navbar-brand" href="" title="" target="_blank"><img src="http://localhost:3000/assets/images/logo/logo.png" width={120} /></a>
                             <button className="navbar-toggler" type="button">
                                 <span className="navbar-toggler-bar bar1"></span>
                                 <span className="navbar-toggler-bar bar2"></span>
@@ -94,14 +94,13 @@ const Login = () => {
                     </div>
                 </nav>
                 <div className="page-header">
-                    <div className="page-header-image" style={{ backgroundImage: 'url(../assets/images/login.jpg)' }} />
+                    <div className="page-header-image" style={{ backgroundImage: 'url(../assets/images/8.jpg)' }} />
                     <div className="container">
                         <div className="col-md-12 content-center">
                             <div className="card-plain">
                                 <form className="form" onSubmit={From_Data_Submit} action="#">
                                     <div className="header">
                                         <div className="logo-container">
-                                            <img src="https://thememakker.com/templates/oreo/hospital/html/assets/images/logo.svg" />
                                         </div>
                                         <h5>Log in</h5>
                                     </div>

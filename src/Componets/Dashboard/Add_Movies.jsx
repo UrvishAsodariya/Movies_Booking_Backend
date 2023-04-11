@@ -12,8 +12,11 @@ const Add_Movies = () => {
     const [time, settime] = useState('');
     const [viewlike, setviewlike] = useState('');
     const [nasta, setnasta] = useState('');
+    const [address, setaddress] = useState('');
     const [rating, setrating] = useState('');
+    const [earning, setearning] = useState('');
     const [description, setdescription] = useState('');
+    const [FormData, setFormData] = useState('');
 
     const btnhandle = (e) => {
         e.preventDefault()
@@ -25,6 +28,8 @@ const Add_Movies = () => {
             time: time,
             viewlike: viewlike,
             nasta: nasta,
+            earning: earning,
+            address: address,
             rating: rating,
             description: description
         })
@@ -44,9 +49,9 @@ const Add_Movies = () => {
         <>
             <Header />
             <Sidebar />
-            <RightSideBar />
+            {/* <RightSideBar /> */}
             <section className="content">
-                <div className="block-header">
+                {/* <div className="block-header">
                     <div className="row">
                         <div className="col-lg-7 col-md-5 col-sm-12">
                             <h2>Add Doctors
@@ -64,7 +69,7 @@ const Add_Movies = () => {
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className="container-fluid">
                     <div className="row clearfix">
                         <div className="col-lg-12 col-md-12 col-sm-12">
@@ -87,7 +92,7 @@ const Add_Movies = () => {
                                             </div>
                                             <div className="col-sm-6">
                                                 <div className="form-group">
-                                                    <input type="text" className="form-control" name='type' value={type} onChange={(e) => { settype(e.target.value) }} />
+                                                    <input type="text" className="form-control" name='type' value={type} onChange={(e) => { settype(e.target.value) }} placeholder="Type Name" />
                                                 </div>
                                             </div>
 
@@ -99,7 +104,7 @@ const Add_Movies = () => {
                                                     <input type="date" className="form-control" name='date' value={date} onChange={(e) => { setdate(e.target.value) }} />
                                                 </div>
                                             </div>
-                                            
+
                                             <div className="col-sm-3">
                                                 <select onChange={(e) => { settime(e.target.value) }} value={time} name='nasta' className="form-control show-tick" >
                                                     <option selected>Time</option>
@@ -123,7 +128,7 @@ const Add_Movies = () => {
                                                     <option value='Marathi'>Marathi</option>
                                                 </select>
                                             </div>
-                                            
+
                                             <div className="col-sm-3">
                                                 <select onChange={(e) => { setnasta(e.target.value) }} value={nasta} name='nasta' className="form-control show-tick" >
                                                     <option selected>Score</option>
@@ -139,8 +144,8 @@ const Add_Movies = () => {
                                                     <option value='100%'>100% </option>
                                                 </select>
                                             </div>
-                                            
-                                            <div className="col-sm-6">
+
+                                            <div className="col-sm-3">
                                                 <select onChange={(e) => { setviewlike(e.target.value) }} value={viewlike} name='viewlike' className="form-control show-tick" >
                                                     <option selected>Tomatometer</option>
                                                     <option value='10%'>10% </option>
@@ -155,7 +160,7 @@ const Add_Movies = () => {
                                                     <option value='100%'>100% </option>
                                                 </select>
                                             </div>
-                                            <div className="col-sm-6">
+                                            <div className="col-sm-3">
                                                 <select onChange={(e) => { setrating(e.target.value) }} value={rating} name='rating' className="form-control show-tick">
                                                     <option selected>Rating</option>
                                                     <option value='1/5'>1/5 </option>
@@ -165,7 +170,17 @@ const Add_Movies = () => {
                                                     <option value='5/5'>5/5 </option>
                                                 </select>
                                             </div>
-                                            
+                                            <div className="col-sm-3">
+                                                <div className="form-group">
+                                                    <input type="text" className="form-control" name='address' value={address} onChange={(e) => { setaddress(e.target.value) }} placeholder="Address" />
+                                                </div>
+                                            </div>
+                                            <div className="col-sm-3">
+                                                <div className="form-group">
+                                                    <input type="text" className="form-control" name='earning' value={earning} onChange={(e) => { setearning(e.target.value) }} placeholder="Earning" />
+                                                </div>
+                                            </div>
+
 
                                             <div className="col-sm-12">
                                                 <div className="form-group">
@@ -173,13 +188,14 @@ const Add_Movies = () => {
                                                 </div>
                                             </div>
                                             <div className="col-lg-12 col-md-12 col-sm-12">
-                                                <form action="https://thememakker.com/" id="frmFileUpload" className="dropzone" method="post" encType="multipart/form-data">
+                                                <form id="frmFileUpload" className="dropzone" encType="multipart/form-data">
                                                     <div className="dz-message">
                                                         <div className="drag-icon-cph"> <i className="material-icons">touch_app</i> </div>
                                                         <h3>Drop files here or click to upload.</h3>
                                                         <em>(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</em> </div>
                                                     <div className="fallback">
                                                         <input name="file" id='img' type="file" multiple />
+                                                        {/* <input type="submit" onClick={handleSubmit}/>Press */}
                                                     </div>
                                                 </form>
                                             </div>

@@ -36,10 +36,10 @@ const Add_Blog = () => {
 
         <>
             <Sidebar />
-            <RightSideBar />
+            {/* <RightSideBar /> */}
             <Header />
             <section className="content">
-                <div className="block-header">
+                {/* <div className="block-header">
                     <div className="row">
                         <div className="col-lg-7 col-md-5 col-sm-12">
                             <h2>Add Sport
@@ -57,7 +57,7 @@ const Add_Blog = () => {
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className="container-fluid">
                     <div className="row clearfix">
                         <div className="col-lg-12 col-md-12 col-sm-12">

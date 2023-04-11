@@ -7,12 +7,16 @@ import axios from 'axios'
 
 const AllBlog = () => {
 
-    const [BlogGetData, SetBlogGetData] = useState([]);
+    const [blogname, setblogname] = useState([]);
+    const [addname, setaddname] = useState([]);
+    const [date, setdate] = useState([]);
+    const [view, setview] = useState([]);
+    const [description, setdescription] = useState([]);
 
     useEffect(() => {
-        axios.post('http://localhost/work/hospital_be/Addblog.php')
+        axios.post('http://localhost:2000/blogdata')
             .then(function (res) {
-                SetBlogGetData([...res.data]);
+                setblogname(res.data.data);
             })
             .catch(function (error) {
                 console.log(error)
@@ -45,15 +49,15 @@ const AllBlog = () => {
                         <div className="col-lg-8 col-md-12 left-box">
                             <div className="card single_post">
 
-                                {BlogGetData.map((value) => {
+                                {blogname.map((value) => {
                                     return (
                                         <>
 
                                             <div className="body">
-                                                <h3 className="m-t-0 m-b-5"><a href="blog-details.html">{value.Title}</a></h3>
+                                                <h3 className="m-t-0 m-b-5"><a href="blog-details.html">{value.blogname}</a></h3>
                                                 <ul className="meta">
                                                     <li><a href="#"><i className="zmdi zmdi-account col-blue" />Posted By: John Smith</a></li>
-                                                    <li><a href="#"><i className="zmdi zmdi-label col-red" />{value.Category}</a></li>
+                                                    <li><a href="#"><i className="zmdi zmdi-label col-red" />{value.addname}</a></li>
                                                     <li><a href="#"><i className="zmdi zmdi-comment-text col-blue" />Comments: 3</a></li>
                                                 </ul>
                                             </div>
@@ -86,7 +90,7 @@ const AllBlog = () => {
                                                         <button className="btn btn-primary btn-icon btn-icon-mini btn-round"><i className="zmdi zmdi-instagram" /></button>
                                                     </div>
                                                 </div>
-                                                <p>{value.Discription}</p>
+                                                <p>{value.description}</p>
                                                 <a href="blog-details.html" title="read more" className="btn btn-round btn-info">Read More</a>
                                             </div>
                                         </>
